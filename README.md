@@ -4,7 +4,7 @@ A baseline repository for VR development using Oculus Integration SDK + Movement
 Repository Details:
 - Unity version [2021.3.23f1](https://unity.com/releases/editor/qa/lts-releases)
 - Oculus Integration version 53.1.
-- Movement SDK version 2.1.0
+- Movement SDK version 2.2.0
 - Oculus plugin version 3.3.0.
 
 Project details:
