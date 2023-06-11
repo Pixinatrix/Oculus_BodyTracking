@@ -149,8 +149,10 @@ namespace Oculus.Movement.AnimationRigging
         /// </summary>
         [SerializeField]
         [Tooltip(RetargetingLayerTooltips.EnableTrackingByProxy)]
-        private bool _enableTrackingByProxy = false;
-
+        protected bool _enableTrackingByProxy = false;
+	
+	    [SerializeField]
+    	protected JointAdjustment[] _customAdjustments;
         /// <inheritdoc cref="_enableTrackingByProxy"/>
         public bool EnableTrackingByProxy
         {
