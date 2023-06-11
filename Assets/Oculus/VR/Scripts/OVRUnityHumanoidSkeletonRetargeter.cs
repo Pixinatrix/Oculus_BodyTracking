@@ -54,7 +54,8 @@ public partial class OVRUnityHumanoidSkeletonRetargeter : OVRSkeleton
 
     private int _lastSkelChangeCount = -1;
 
-    protected class JointAdjustment
+    [Serializable]
+    public class JointAdjustment
     {
         /// <summary>
         /// Joint to adjust.
@@ -90,7 +91,7 @@ public partial class OVRUnityHumanoidSkeletonRetargeter : OVRSkeleton
         _skeletonType = SkeletonType.Body;
     }
 
-    private readonly JointAdjustment[] _adjustments =
+    protected JointAdjustment[] _adjustments =
     {
         new JointAdjustment
         {
@@ -102,6 +103,7 @@ public partial class OVRUnityHumanoidSkeletonRetargeter : OVRSkeleton
     protected JointAdjustment[] Adjustments
     {
         get => _adjustments;
+        set => _adjustments = value;
     }
 
     private readonly OVRHumanBodyBonesMappings.BodySection[] _bodySectionsToAlign =
@@ -114,7 +116,7 @@ public partial class OVRUnityHumanoidSkeletonRetargeter : OVRSkeleton
 
     protected OVRHumanBodyBonesMappings.BodySection[] BodySectionsToAlign
     {
-        get =>  _bodySectionsToAlign;
+        get => _bodySectionsToAlign;
     }
 
     private readonly OVRHumanBodyBonesMappings.BodySection[] _bodySectionToPosition =
