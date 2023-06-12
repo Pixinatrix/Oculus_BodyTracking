@@ -1294,7 +1294,7 @@ GameObject:
   - component: {fileID: 1598490765506125331}
   m_Layer: 0
   m_Name: Banana Man
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1360,6 +1360,7 @@ MonoBehaviour:
   _positionsToCorrectLateUpdate: {fileID: 31900000, guid: 8aaeff1dd84dcdb468f621bf1ecfea63, type: 2}
   _maskToSetToTPose: {fileID: 31900000, guid: 7129d5b0eec7de64a93fce9a6ba8f4d7, type: 2}
   _enableTrackingByProxy: 0
+  _customAdjustments: []
   SkeletonPostProcessing:
     m_PersistentCalls:
       m_Calls:
