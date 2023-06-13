@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e06fe30fd4efa954b8f53ccc8da8f46b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactors: []
+  _interactors:
+  - {fileID: 1361880449030437242}
   _activeState: {fileID: 0}
   _candidateComparer: {fileID: 0}
   _maxIterationsPerFrame: 3
@@ -270,7 +271,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e06fe30fd4efa954b8f53ccc8da8f46b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactors: []
+  _interactors:
+  - {fileID: 5747009412698658441}
   _activeState: {fileID: 0}
   _candidateComparer: {fileID: 0}
   _maxIterationsPerFrame: 3
