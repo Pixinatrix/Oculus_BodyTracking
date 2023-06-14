@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _grabbable: {fileID: 83900348}
-  _rigidbody: {fileID: 0}
+  _rigidbody: {fileID: 83900349}
   _scaleMassWithSize: 1
 --- !u!114 &83900351
 MonoBehaviour:
@@ -636,6 +636,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 221076440376301697, guid: d93b7e04b48cd7b4fa849695dba2ce9c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 289756083314716589, guid: d93b7e04b48cd7b4fa849695dba2ce9c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -644,6 +648,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1219746402986840854, guid: d93b7e04b48cd7b4fa849695dba2ce9c, type: 3}
+      propertyPath: _rigidbody
+      value: 
+      objectReference: {fileID: 1339712713}
     - target: {fileID: 1245672772583743105, guid: d93b7e04b48cd7b4fa849695dba2ce9c, type: 3}
       propertyPath: _interactors.Array.size
       value: 1
@@ -652,10 +660,18 @@ PrefabInstance:
       propertyPath: _interactors.Array.data[0]
       value: 
       objectReference: {fileID: 428309443}
+    - target: {fileID: 3281206119671778663, guid: d93b7e04b48cd7b4fa849695dba2ce9c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3281206119671778664, guid: d93b7e04b48cd7b4fa849695dba2ce9c, type: 3}
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3284119075109806335, guid: d93b7e04b48cd7b4fa849695dba2ce9c, type: 3}
+      propertyPath: _rigidbody
+      value: 
+      objectReference: {fileID: 1339712713}
     - target: {fileID: 3301463140785248561, guid: d93b7e04b48cd7b4fa849695dba2ce9c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1152,6 +1168,10 @@ PrefabInstance:
     - target: {fileID: 3282029263655771837, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
       propertyPath: m_Name
       value: HandGrabInteractor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649835352202918574, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6141351533274568304, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
       propertyPath: _syntheticHand
@@ -1969,7 +1989,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5649835352202918574, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6141351533274568304, guid: 885ecae56b16f13428a67de5ae482a72, type: 3}
       propertyPath: _syntheticHand
@@ -2283,8 +2303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35bd901969c36e54fad20befcb2b9325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FollowingTransforms:
-  - {fileID: 0}
+  FollowingTransforms: []
 --- !u!1 &1366544606
 GameObject:
   m_ObjectHideFlags: 0
@@ -3259,12 +3278,36 @@ MonoBehaviour:
   _applyBoneTranslations: 1
   _disableAvatar: 0
   _positionsToCorrectLateUpdate: {fileID: 31900000, guid: 7ab465f5f55c8994c9826d23614d59ea, type: 2}
-  _maskToSetToTPose: {fileID: 0}
+  _maskToSetToTPose: {fileID: 31900000, guid: 7129d5b0eec7de64a93fce9a6ba8f4d7, type: 2}
   _enableTrackingByProxy: 0
   _customAdjustments: []
   SkeletonPostProcessing:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1383896707}
+        m_TargetAssemblyTypeName: SkeletonHandAdjustment, Assembly-CSharp
+        m_MethodName: SkeletonPostProcess
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1573520538}
+        m_TargetAssemblyTypeName: SkeletonHandAdjustment, Assembly-CSharp
+        m_MethodName: SkeletonPostProcess
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1731635569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3277,7 +3320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 932aa90fceecb0c4f8f4f94f0497f6bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hand: {fileID: 0}
+  hand: {fileID: 1187477916}
   CameraRig: {fileID: 1181647818}
   _handsAreOffset: 0
 --- !u!4 &1734145798 stripped
