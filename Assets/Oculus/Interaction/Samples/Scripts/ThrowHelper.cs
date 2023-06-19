@@ -49,7 +49,6 @@ public class ThrowHelper : MonoBehaviour
     private void MaskAndRelease(float power)
     {
         Collider arrowCollider = GetComponentInChildren<Collider>();
-        arrowCollider.enabled = false;
         this.ballRigidBody.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
         Vector3 force = handVectorHelper.GetVelocityDirection(handIdentifier, this.transform).Item2 * power * speed;
         this.ballRigidBody.AddForce(force, ForceMode.Impulse);
