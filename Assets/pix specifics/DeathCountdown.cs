@@ -16,16 +16,19 @@ public class DeathCountdown : MonoBehaviour
 
     private AudioSource audioSource;
     private float secondsLeft;
+    private ScoringSystem scoringSystem;
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-
+        scoringSystem = FindAnyObjectByType<ScoringSystem>();
     }
 
     public void StartCountDown()
     {
-        StartCoroutine(CountdownRoutine(countdownDuration));
+       scoringSystem.IsGameOn = true;
+        scoringSystem.ResetScore();
+       StartCoroutine(CountdownRoutine(countdownDuration));
     }
 
     private IEnumerator CountdownRoutine(int countDownDuration)
@@ -45,9 +48,8 @@ public class DeathCountdown : MonoBehaviour
             yield return new WaitForSeconds(1);
 
         }
-
         OnCountdownFinished.Invoke();
-
+        scoringSystem.IsGameOn = false;
     }
 
 
